@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("You.Archi.IdGenerator.Redis")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6612db3077e9ca41fdb7026b9d4b713050f0135")]
 [assembly: System.Reflection.AssemblyProductAttribute("You.Archi.IdGenerator.Redis")]
 [assembly: System.Reflection.AssemblyTitleAttribute("You.Archi.IdGenerator.Redis")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
