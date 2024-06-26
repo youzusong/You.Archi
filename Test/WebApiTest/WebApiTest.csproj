@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\You.Archi.IdGenerator.Memory\You.Archi.IdGenerator.Memory.csproj" />
+    <ProjectReference Include="..\..\Framework\You.Archi.IdGenerator.Redis\You.Archi.IdGenerator.Redis.csproj" />
+  </ItemGroup>
+
+</Project>
