@@ -39,15 +39,15 @@ namespace You.Archi.IdGenerator.Redis
         {
             // 获取时间戳(秒)
             var dtNow = DateTime.Now;
-            var timestamp = dtNow.ToUniversalTime().Ticks / 10000000 - EPOCH_TIME;
+            var timestamp = dtNow.ToUniversalTime().Ticks / 10000000;
 
             // 获取序列ID
             var db = (IDatabase)_RedisConnectMethod?.Invoke(_cache, null)!;
             var key = $"incr:{sceneKey}:{dtNow.ToString("yyyyMMdd")}";
-            var scquence = db.StringIncrement(key);
+            var scquenceId = db.StringIncrement(key);
 
             // 拼接
-            return (timestamp << SCQUENCE_BITS) | scquence;
+            return ((timestamp - EPOCH_TIME) << SCQUENCE_BITS) | scquenceId;
         }
 
         public void Dispose()

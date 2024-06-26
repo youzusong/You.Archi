@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "You.Archi.IdGenerator.Memor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdGeneratorTest", "Test\IdGeneratorTest\IdGeneratorTest.csproj", "{A110F47C-0ECF-45A4-84E2-5B77C968B281}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTest", "Test\WebApiTest\WebApiTest.csproj", "{F0B3BD9C-D0B5-49E8-A1C2-B9EFB8ED2C46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{A110F47C-0ECF-45A4-84E2-5B77C968B281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A110F47C-0ECF-45A4-84E2-5B77C968B281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A110F47C-0ECF-45A4-84E2-5B77C968B281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0B3BD9C-D0B5-49E8-A1C2-B9EFB8ED2C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B3BD9C-D0B5-49E8-A1C2-B9EFB8ED2C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B3BD9C-D0B5-49E8-A1C2-B9EFB8ED2C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B3BD9C-D0B5-49E8-A1C2-B9EFB8ED2C46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{0E06B231-D2A2-4FCA-AA8D-E3470013F4A6} = {9ED20603-3CD8-4469-A20B-424CAB607828}
 		{02FBAF79-B1CC-45D8-8038-4E8F812CC1DC} = {9ED20603-3CD8-4469-A20B-424CAB607828}
 		{A110F47C-0ECF-45A4-84E2-5B77C968B281} = {AA08AAC2-4B39-4BA7-A7E9-7B776CFD43CA}
+		{F0B3BD9C-D0B5-49E8-A1C2-B9EFB8ED2C46} = {AA08AAC2-4B39-4BA7-A7E9-7B776CFD43CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {597DCC9D-2708-4A73-BBAF-FDC321CBABEB}
