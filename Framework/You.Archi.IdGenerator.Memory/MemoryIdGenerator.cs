@@ -66,8 +66,8 @@ namespace You.Archi.IdGenerator.Memory
                 {
                     // 如果上次生成时间和当前生成时间在同一毫秒内，则序列ID自增
                     // 如果自增后的序列ID超出最大值，则等待到下一毫秒
-                    _sequenceId += 1;
-                    if (_sequenceId > SCQUENCE_MAX)
+                    _sequenceId = (_sequenceId + 1) & SCQUENCE_MAX;
+                    if (_sequenceId == 0)
                     {
                         timestamp = GetNextTimestamp(_lastTimestamp);
                         _sequenceId = 1;
