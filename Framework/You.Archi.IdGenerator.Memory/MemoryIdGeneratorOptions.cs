@@ -22,5 +22,6 @@ namespace You.Archi.IdGenerator.Memory
         /// </summary>
         public int WorkerId { get; set; }
 
+        
     }
 }

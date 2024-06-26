@@ -6,12 +6,13 @@ using System.Reflection;
 namespace You.Archi.IdGenerator.Redis
 {
     /// <summary>
-    /// Redis之Id生成器
+    /// Redis之ID生成器
+    /// <para>符号位（1bit） + 时间戳（31bit） + 序列ID(32bit)</para>
     /// </summary>
     public class RedisIdGenerator : IDisposable
     {
-        private const long EPOCH_TIME = 63854236800L;   // 初始时间：2024-06-18
-        private const byte SCQUENCE_BITS = 32;          // 序列号位数
+        private const long EPOCH_TIME = 63854236800L;   // 初始时间（秒）：2024-06-18
+        private const byte SCQUENCE_BITS = 32;          // 序列ID位数
 
         private static readonly MethodInfo? _RedisConnectMethod;    // Redis连接方法
 
@@ -30,22 +31,22 @@ namespace You.Archi.IdGenerator.Redis
         }
 
         /// <summary>
-        /// 生成新Id
+        /// 生成新ID
         /// </summary>
         /// <param name="sceneKey">业务场景Key</param>
-        /// <returns>新Id</returns>
+        /// <returns>新ID</returns>
         public long NewId(string sceneKey)
         {
-            // 1、获取时间戳(秒)
+            // 获取时间戳(秒)
             var dtNow = DateTime.Now;
             var timestamp = dtNow.ToUniversalTime().Ticks / 10000000 - EPOCH_TIME;
 
-            // 2、获取序列号
+            // 获取序列ID
             var db = (IDatabase)_RedisConnectMethod?.Invoke(_cache, null)!;
             var key = $"incr:{sceneKey}:{dtNow.ToString("yyyyMMdd")}";
             var scquence = db.StringIncrement(key);
 
-            // 3、拼接：空位(1bit) + 时间戳(31bit) + 序列号(32bit)
+            // 拼接
             return (timestamp << SCQUENCE_BITS) | scquence;
         }
 
