@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Framework\You.Archi.IdGenerator.Memory\You.Archi.IdGenerator.Memory.csproj" />
     <ProjectReference Include="..\..\Framework\You.Archi.IdGenerator.Redis\You.Archi.IdGenerator.Redis.csproj" />
+    <ProjectReference Include="..\..\Framework\You.Archi.Json\You.Archi.Json.csproj" />
   </ItemGroup>
 
 </Project>
