@@ -83,7 +83,7 @@ namespace You.Archi.IdGenerator.Memory
                 _lastTimestamp = timestamp;
 
                 // 拼接
-                return (timestamp << TIMESTAMP_SHIFT) | (_datacenterId << DATACENTERID_SHIFT) | (_workderId << WORKERID_SHIFT) | _sequenceId;
+                return ((timestamp - EPOCH_TIME) << TIMESTAMP_SHIFT) | (_datacenterId << DATACENTERID_SHIFT) | (_workderId << WORKERID_SHIFT) | _sequenceId;
             }
         }
 
@@ -93,7 +93,7 @@ namespace You.Archi.IdGenerator.Memory
         /// <returns>当前时间戳（毫秒）</returns>
         private static long GetCurrTimestamp()
         {
-            return DateTime.Now.ToUniversalTime().Ticks / 10000 - EPOCH_TIME;
+            return DateTime.Now.ToUniversalTime().Ticks / 10000;
         }
 
         /// <summary>
