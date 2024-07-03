@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using You.Archi;
 
 namespace WebApiTest.Controllers
 {
@@ -6,6 +7,13 @@ namespace WebApiTest.Controllers
     [Route("/{controller}/{action}")]
     public class TestController : ControllerBase
     {
+
+        public string Index()
+        {
+            var val = Int32.IsPositive(0);
+
+            return val.ToString();
+        }
 
         public object Data()
         {

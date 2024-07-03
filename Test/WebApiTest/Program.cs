@@ -1,5 +1,5 @@
 using Microsoft.Extensions.Caching.Distributed;
-using You.Archi.Json.Converter;
+using You.Archi.Json.NewtonsoftJson.Converter;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,11 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 var mvcBuilder = builder.Services.AddControllers();
 
 // Mvc > Newtonsoft Json
-mvcBuilder.AddNewtonsoftJson(opt =>
+mvcBuilder.AddNewtonsoftJson(options =>
 {
-    opt.SerializerSettings.DateFormatString = "yyyy年MM月dd日";
-    opt.SerializerSettings.Converters.Add(new LongJsonConverter());
-    opt.SerializerSettings.Converters.Add(new NullableLongJsonConverter());
+    options.SerializerSettings.DateFormatString = "yyyy年MM月dd日";
+    options.SerializerSettings.Converters.Add(new YaLongJsonConverter());
+    options.SerializerSettings.Converters.Add(new YaNullableLongJsonConverter());
 });
 
 // Redis Cache
@@ -33,6 +33,10 @@ app.Map("/redis", (IDistributedCache cache) =>
 {
     cache.SetString("test", DateTime.Now.ToString());
     return "OK";
+});
+
+app.Map("/config", (IConfiguration configuration) => {
+    return configuration["Security:EncryptKey"];
 });
 
 app.MapControllers();

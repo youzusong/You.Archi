@@ -1,5 +1,5 @@
-bin
 .vs
+.github
+bin
 obj
 TestResults
-.github

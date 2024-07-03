@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
 
-namespace You.Archi.Json.Converter
+namespace You.Archi.Json.NewtonsoftJson.Converter
 {
     /// <summary>
     /// 可空long类型Json转换器
     /// </summary>
-    public class NullableLongJsonConverter : JsonConverter<long?>
+    public class YaNullableLongJsonConverter : JsonConverter<long?>
     {
         public override long? ReadJson(JsonReader reader, Type objectType, long? existingValue, bool hasExistingValue, JsonSerializer serializer)
         {

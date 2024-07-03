@@ -15,7 +15,7 @@ namespace IdGeneratorTest
                 Configuration = "101.33.202.113:6379,password=Izayoi@1226"
             };
 
-            var idGenerator = new RedisIdGenerator(options);
+            var idGenerator = new YaRedisIdGenerator(options);
 
             for (int i = 0; i < 100; i++)
             {
@@ -26,13 +26,13 @@ namespace IdGeneratorTest
         [TestMethod]
         public void TestMemoryIdGenerator()
         {
-            var options = new MemoryIdGeneratorOptions
+            var options = new YaMemoryIdGeneratorOptions
             {
                 DatacenterId = 1,
                 WorkerId = 2
             };
 
-            var idGenerator = new MemoryIdGenerator(options);
+            var idGenerator = new YaMemoryIdGenerator(options);
 
             for (int i = 0; i < 100; i++)
             {

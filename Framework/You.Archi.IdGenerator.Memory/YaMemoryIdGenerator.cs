@@ -6,18 +6,18 @@ namespace You.Archi.IdGenerator.Memory
     /// 内存之ID生成器
     /// <para>符号位（1bit）+ 时间戳（41bit）+ 机房ID（5bit）+ 机器ID（5bit）+ 序号ID（12bit）</para>
     /// </summary>
-    public class MemoryIdGenerator
+    public class YaMemoryIdGenerator
     {
         private const long EPOCH_TIME = 63854236800000L;    // 初始时间（毫秒）：2024-06-18
 
-        private const byte DATACENTERID_BITS = 5;   // 机房ID位数
-        private const byte WORKERID_BITS = 5;       // 机器ID位数
         private const byte SCQUENCE_BITS = 12;      // 序列ID位数
+        private const byte WORKERID_BITS = 5;       // 机器ID位数
+        private const byte DATACENTERID_BITS = 5;   // 机房ID位数
 
-        private const long DATACENTERID_MAX = -1L ^ (-1L << DATACENTERID_BITS); // 机房ID最大值
-        private const long WORKDERID_MAX = -1L ^ (-1L << WORKERID_BITS);        // 机器ID最大值
         private const long SCQUENCE_MAX = -1L ^ (-1L << SCQUENCE_BITS);         // 序列ID最大值
-
+        private const long WORKDERID_MAX = -1L ^ (-1L << WORKERID_BITS);        // 机器ID最大值
+        private const long DATACENTERID_MAX = -1L ^ (-1L << DATACENTERID_BITS); // 机房ID最大值
+        
         private const byte WORKERID_SHIFT = SCQUENCE_BITS;                              // 机器ID左移位数
         private const byte DATACENTERID_SHIFT = WORKERID_SHIFT + WORKERID_BITS;         // 机房ID左移位数
         private const byte TIMESTAMP_SHIFT = DATACENTERID_SHIFT + DATACENTERID_BITS;    // 时间戳左移位数
@@ -29,7 +29,7 @@ namespace You.Archi.IdGenerator.Memory
         private long _sequenceId = 0L;              // 序号ID
         private long _lastTimestamp = 0L;           // 上次生成ID的时间戳
 
-        public MemoryIdGenerator(IOptions<MemoryIdGeneratorOptions> options)
+        public YaMemoryIdGenerator(IOptions<YaMemoryIdGeneratorOptions> options)
         {
             var datacenterId = options.Value.DatacenterId;
             var workerId = options.Value.WorkerId;

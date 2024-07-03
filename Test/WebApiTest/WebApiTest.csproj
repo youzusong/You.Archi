@@ -7,13 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.6" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Framework\You.Archi.IdGenerator.Memory\You.Archi.IdGenerator.Memory.csproj" />
     <ProjectReference Include="..\..\Framework\You.Archi.IdGenerator.Redis\You.Archi.IdGenerator.Redis.csproj" />
-    <ProjectReference Include="..\..\Framework\You.Archi.Json\You.Archi.Json.csproj" />
+    <ProjectReference Include="..\..\Framework\You.Archi.Json.NewtonsoftJson\You.Archi.Json.NewtonsoftJson.csproj" />
+    <ProjectReference Include="..\..\Framework\You.Archi\You.Archi.csproj" />
   </ItemGroup>
 
 </Project>
