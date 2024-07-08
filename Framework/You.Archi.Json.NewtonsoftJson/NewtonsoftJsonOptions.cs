@@ -5,10 +5,10 @@ namespace You.Archi.Json.NewtonsoftJson
     /// <summary>
     /// NewtonsoftJson配置项
     /// </summary>
-    public class ArcNewtonsoftJsonOptions
+    public class NewtonsoftJsonOptions
     {
 
-        public ArcNewtonsoftJsonOptions()
+        public NewtonsoftJsonOptions()
         {
             this.SerializerSettings = new JsonSerializerSettings();
         }

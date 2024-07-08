@@ -15,7 +15,7 @@ namespace IdGeneratorTest
                 Configuration = "101.33.202.113:6379,password=Izayoi@1226"
             };
 
-            var idGenerator = new ArcRedisIdGenerator(options);
+            var idGenerator = new RedisIdGenerator(options);
 
             for (int i = 0; i < 100; i++)
             {
@@ -26,13 +26,13 @@ namespace IdGeneratorTest
         [TestMethod]
         public void TestMemoryIdGenerator()
         {
-            var options = new ArcMemoryIdGeneratorOptions
+            var options = new MemoryIdGeneratorOptions
             {
                 DatacenterId = 1,
                 WorkerId = 2
             };
 
-            var idGenerator = new ArcMemoryIdGenerator(options);
+            var idGenerator = new MemoryIdGenerator(options);
 
             for (int i = 0; i < 100; i++)
             {

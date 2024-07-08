@@ -5,9 +5,9 @@ namespace You.Archi.Application
     /// <summary>
     /// 应用程序初始化上下文
     /// </summary>
-    public class ArcApplicationInitializationContext
+    public class ApplicationInitializationContext
     {
-        public ArcApplicationInitializationContext([NotNull] IServiceProvider serviceProvider)
+        public ApplicationInitializationContext([NotNull] IServiceProvider serviceProvider)
         {
             this.ServiceProvider = serviceProvider;
         }

@@ -4,9 +4,9 @@
     /// 依赖类型注册属性
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-    public class ArcDependsOnAttribute : Attribute, IArcDependedTypesProvider
+    public class DependsOnAttribute : Attribute, IDependedTypesProvider
     {
-        public ArcDependsOnAttribute(params Type[] dependedTypes)
+        public DependsOnAttribute(params Type[] dependedTypes)
         {
             this.DependedTypes = dependedTypes;
         }

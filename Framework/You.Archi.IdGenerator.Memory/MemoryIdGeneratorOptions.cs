@@ -2,11 +2,11 @@
 
 namespace You.Archi.IdGenerator.Memory
 {
-    public class ArcMemoryIdGeneratorOptions : IOptions<ArcMemoryIdGeneratorOptions>
+    public class MemoryIdGeneratorOptions : IOptions<MemoryIdGeneratorOptions>
     {
-        public ArcMemoryIdGeneratorOptions Value => this;
+        public MemoryIdGeneratorOptions Value => this;
 
-        public ArcMemoryIdGeneratorOptions()
+        public MemoryIdGeneratorOptions()
         {
             this.DatacenterId = 1;
             this.WorkerId = 1;

@@ -8,7 +8,7 @@ namespace You.Archi.Utilities
     /// 检验工具类
     /// </summary>
     [DebuggerStepThrough]
-    public static class ArcCheckUtility
+    public static class CheckUtility
     {
         /// <summary>
         /// 不可为null

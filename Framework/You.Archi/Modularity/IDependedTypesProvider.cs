@@ -3,7 +3,7 @@
     /// <summary>
     /// 依赖类型提供者接口
     /// </summary>
-    public interface IArcDependedTypesProvider
+    public interface IDependedTypesProvider
     {
         /// <summary>
         /// 获取依赖类型集合

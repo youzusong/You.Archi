@@ -3,20 +3,20 @@
     /// <summary>
     /// 模块接口
     /// </summary>
-    public interface IArcModule
+    public interface IModule
     {
         /// <summary>
         /// 配置服务
         /// </summary>
         /// <param name="context">服务配置上下文</param>
-        void ConfigureServices(ArcServiceConfigurationContext context);
+        void ConfigureServices(ServiceConfigurationContext context);
 
         /// <summary>
         /// 配置服务
         /// </summary>
         /// <param name="context">服务配置上下文</param>
         /// <returns></returns>
-        Task ConfigureServicesAsync(ArcServiceConfigurationContext context);
+        Task ConfigureServicesAsync(ServiceConfigurationContext context);
 
     }
 }

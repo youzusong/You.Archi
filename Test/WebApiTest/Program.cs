@@ -1,10 +1,8 @@
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Options;
-using System.Xml.Linq;
 using WebApiTest.Options;
 using You.Archi.Json.NewtonsoftJson;
-using You.Archi.Json.NewtonsoftJson.Converter;
-using Microsoft.Extensions.DependencyInjection;
+using You.Archi.Moment;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,21 +14,12 @@ Action<TestOptions> test = (opts) => {
 //builder.Services.Configure<TestOptions>("", test);
 //builder.Services.AddSingleton<IConfigureOptions<TestOptions>>(new ConfigureNamedOptions<TestOptions>("", test));
 
-// Mvc
-var mvcBuilder = builder.Services.AddControllers();
+// Moment
+builder.Services.AddOptions<MomentOptions>();
+builder.Services.AddTransient<IMoment, Moment>();
 
-// Mvc > Newtonsoft Json
-//mvcBuilder.AddNewtonsoftJson(options =>
-//{
-//    options.SerializerSettings.DateFormatString = "yyyy年MM月dd日";
-//    options.SerializerSettings.Converters.Add(new LongJsonConverter());
-//    options.SerializerSettings.Converters.Add(new NullableLongJsonConverter());
-//});
-
-mvcBuilder.AddArchiNewtonsoftJson(options =>
-{
-    options.ArchiSerializerSettings.DateTimeFormat = "yyyy年MM月dd日 HH时mm分ss秒";
-});
+// Mvc NewtonsoftJson
+builder.Services.AddArchiMvcNewtonsoftJson(options => { });
 
 
 // Redis Cache
@@ -54,8 +43,9 @@ app.Map("/redis", (IDistributedCache cache) =>
     return "OK";
 });
 
-app.Map("/config", (IConfiguration configuration, IOptions<TestOptions> testOpts) => {
-    return testOpts.Value.EncryptSalt;
+app.Map("/config", (IConfiguration configuration, IOptions<NewtonsoftJsonOptions> opts) => {
+
+    return opts.Value.SerializerSettings.DateFormatString;
    // return configuration["Security:EncryptKey"];
 });
 

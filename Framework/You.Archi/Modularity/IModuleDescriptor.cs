@@ -5,12 +5,12 @@ namespace You.Archi.Modularity
     /// <summary>
     /// 模块描述接口
     /// </summary>
-    public interface IArcModuleDescriptor
+    public interface IModuleDescriptor
     {
         /// <summary>
         /// 模块实例
         /// </summary>
-        IArcModule Instance { get; }
+        IModule Instance { get; }
 
         /// <summary>
         /// 模块类型
@@ -35,6 +35,6 @@ namespace You.Archi.Modularity
         /// <summary>
         /// 依赖模块的描述集合
         /// </summary>
-        IReadOnlyList<IArcModuleDescriptor> Dependencies { get; }
+        IReadOnlyList<IModuleDescriptor> Dependencies { get; }
     }
 }

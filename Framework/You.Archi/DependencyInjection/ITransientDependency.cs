@@ -1,9 +1,9 @@
 ﻿namespace You.Archi.DependencyInjection
 {
     /// <summary>
-    /// 单例依赖接口
+    /// 瞬时依赖接口
     /// </summary>
-    public interface IArcSingletonDependency : IArcDependency
+    public interface ITransientDependency : IDependency
     {
     }
 }

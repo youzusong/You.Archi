@@ -1,9 +1,10 @@
 ﻿namespace You.Archi.DependencyInjection
 {
     /// <summary>
-    /// 依赖接口
+    /// 范围依赖接口
     /// </summary>
-    public interface IArcDependency
+    public interface IScopedDependency : IDependency
     {
+
     }
 }

@@ -3,7 +3,7 @@
     /// <summary>
     /// JSON序列化器接口
     /// </summary>
-    public interface IArcJsonSerializer
+    public interface IJsonSerializer
     {
         /// <summary>
         /// 序列化

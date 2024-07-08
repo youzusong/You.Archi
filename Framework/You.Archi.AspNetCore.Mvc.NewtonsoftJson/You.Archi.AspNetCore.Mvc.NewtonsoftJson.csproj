@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\You.Archi.Json.NewtonsoftJson\You.Archi.Json.NewtonsoftJson.csproj" />
+    <ProjectReference Include="..\You.Archi.Moment\You.Archi.Moment.csproj" />
   </ItemGroup>
 
 </Project>

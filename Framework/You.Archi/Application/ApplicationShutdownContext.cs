@@ -5,9 +5,9 @@ namespace You.Archi.Application
     /// <summary>
     /// 应用程序关闭上下文
     /// </summary>
-    public class ArcApplicationShutdownContext
+    public class ApplicationShutdownContext
     {
-        public ArcApplicationShutdownContext([NotNull] IServiceProvider serviceProvider)
+        public ApplicationShutdownContext([NotNull] IServiceProvider serviceProvider)
         {
             this.ServiceProvider = serviceProvider;
         }

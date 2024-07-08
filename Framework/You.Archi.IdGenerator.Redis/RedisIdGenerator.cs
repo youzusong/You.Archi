@@ -9,7 +9,7 @@ namespace You.Archi.IdGenerator.Redis
     /// Redis之ID生成器
     /// <para>符号位（1bit） + 时间戳（31bit） + 序列ID(32bit)</para>
     /// </summary>
-    public class ArcRedisIdGenerator : IDisposable
+    public class RedisIdGenerator : IDisposable
     {
         private const long EPOCH_TIME = 63854236800L;   // 初始时间（秒）：2024-06-18
         private const byte SCQUENCE_BITS = 32;          // 序列ID位数
@@ -19,13 +19,13 @@ namespace You.Archi.IdGenerator.Redis
         //private readonly IDistributedCache _cache;
         private readonly RedisCache _cache;
 
-        static ArcRedisIdGenerator()
+        static RedisIdGenerator()
         {
             // 反射获取RedisCache的内部方法
             _RedisConnectMethod = typeof(RedisCache).GetMethod("Connect", BindingFlags.Instance | BindingFlags.NonPublic);
         }
 
-        public ArcRedisIdGenerator(IOptions<RedisCacheOptions> options)
+        public RedisIdGenerator(IOptions<RedisCacheOptions> options)
         {
             _cache = new RedisCache(options);
         }
