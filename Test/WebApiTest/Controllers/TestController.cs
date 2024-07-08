@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using You.Archi;
 
 namespace WebApiTest.Controllers
@@ -7,6 +8,10 @@ namespace WebApiTest.Controllers
     [Route("/{controller}/{action}")]
     public class TestController : ControllerBase
     {
+        public TestController()
+        {
+            
+        }
 
         public string Index()
         {

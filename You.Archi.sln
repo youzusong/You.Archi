@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTest", "Test\WebApiTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "You.Archi", "Framework\You.Archi\You.Archi.csproj", "{5897A82A-2B29-40BE-A8AF-6701301383CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "You.Archi.Json.NewtonsoftJson", "Framework\You.Archi.Json.NewtonsoftJson\You.Archi.Json.NewtonsoftJson.csproj", "{8BD15FD6-D199-4796-BBA3-D9EFB7434887}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "You.Archi.Json.NewtonsoftJson", "Framework\You.Archi.Json.NewtonsoftJson\You.Archi.Json.NewtonsoftJson.csproj", "{8BD15FD6-D199-4796-BBA3-D9EFB7434887}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "You.Archi.Json.Abstractions", "Framework\You.Archi.Json.Abstractions\You.Archi.Json.Abstractions.csproj", "{CB118E07-57C2-478D-A800-C835B1796D67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "You.Archi.Json.Abstractions", "Framework\You.Archi.Json.Abstractions\You.Archi.Json.Abstractions.csproj", "{CB118E07-57C2-478D-A800-C835B1796D67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "You.Archi.AspNetCore.Mvc.NewtonsoftJson", "Framework\You.Archi.AspNetCore.Mvc.NewtonsoftJson\You.Archi.AspNetCore.Mvc.NewtonsoftJson.csproj", "{3981DE76-7111-4658-81BC-E3F4B1B147BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{CB118E07-57C2-478D-A800-C835B1796D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB118E07-57C2-478D-A800-C835B1796D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB118E07-57C2-478D-A800-C835B1796D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3981DE76-7111-4658-81BC-E3F4B1B147BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3981DE76-7111-4658-81BC-E3F4B1B147BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3981DE76-7111-4658-81BC-E3F4B1B147BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3981DE76-7111-4658-81BC-E3F4B1B147BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{5897A82A-2B29-40BE-A8AF-6701301383CD} = {9ED20603-3CD8-4469-A20B-424CAB607828}
 		{8BD15FD6-D199-4796-BBA3-D9EFB7434887} = {9ED20603-3CD8-4469-A20B-424CAB607828}
 		{CB118E07-57C2-478D-A800-C835B1796D67} = {9ED20603-3CD8-4469-A20B-424CAB607828}
+		{3981DE76-7111-4658-81BC-E3F4B1B147BF} = {9ED20603-3CD8-4469-A20B-424CAB607828}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {597DCC9D-2708-4A73-BBAF-FDC321CBABEB}

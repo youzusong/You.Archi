@@ -3,11 +3,11 @@
 namespace You.Archi.Application
 {
     /// <summary>
-    /// 应用程序初始化上下文
+    /// 应用程序关闭上下文
     /// </summary>
-    public class YaApplicationInitializationContext
+    public class ArcApplicationShutdownContext
     {
-        public YaApplicationInitializationContext([NotNull] IServiceProvider serviceProvider)
+        public ArcApplicationShutdownContext([NotNull] IServiceProvider serviceProvider)
         {
             this.ServiceProvider = serviceProvider;
         }

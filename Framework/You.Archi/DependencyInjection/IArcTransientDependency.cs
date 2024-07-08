@@ -1,10 +1,9 @@
 ﻿namespace You.Archi.DependencyInjection
 {
     /// <summary>
-    /// 范围依赖接口
+    /// 瞬时依赖接口
     /// </summary>
-    public interface IYaScopedDependency : IYaDependency
+    public interface IArcTransientDependency : IArcDependency
     {
-
     }
 }

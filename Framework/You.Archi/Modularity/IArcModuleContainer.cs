@@ -3,11 +3,11 @@
     /// <summary>
     /// 模块容器接口
     /// </summary>
-    public interface IYaModuleContainer
+    public interface IArcModuleContainer
     {
         /// <summary>
         /// 模块描述集合
         /// </summary>
-        IReadOnlyList<IYaModuleDescriptor> Modules { get; }
+        IReadOnlyList<IArcModuleDescriptor> Modules { get; }
     }
 }

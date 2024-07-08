@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Framework\You.Archi.AspNetCore.Mvc.NewtonsoftJson\You.Archi.AspNetCore.Mvc.NewtonsoftJson.csproj" />
     <ProjectReference Include="..\..\Framework\You.Archi.IdGenerator.Memory\You.Archi.IdGenerator.Memory.csproj" />
     <ProjectReference Include="..\..\Framework\You.Archi.IdGenerator.Redis\You.Archi.IdGenerator.Redis.csproj" />
     <ProjectReference Include="..\..\Framework\You.Archi.Json.NewtonsoftJson\You.Archi.Json.NewtonsoftJson.csproj" />

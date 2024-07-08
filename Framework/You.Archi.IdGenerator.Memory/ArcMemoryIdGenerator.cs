@@ -6,7 +6,7 @@ namespace You.Archi.IdGenerator.Memory
     /// 内存之ID生成器
     /// <para>符号位（1bit）+ 时间戳（41bit）+ 机房ID（5bit）+ 机器ID（5bit）+ 序号ID（12bit）</para>
     /// </summary>
-    public class YaMemoryIdGenerator
+    public class ArcMemoryIdGenerator
     {
         private const long EPOCH_TIME = 63854236800000L;    // 初始时间（毫秒）：2024-06-18
 
@@ -29,7 +29,7 @@ namespace You.Archi.IdGenerator.Memory
         private long _sequenceId = 0L;              // 序号ID
         private long _lastTimestamp = 0L;           // 上次生成ID的时间戳
 
-        public YaMemoryIdGenerator(IOptions<YaMemoryIdGeneratorOptions> options)
+        public ArcMemoryIdGenerator(IOptions<ArcMemoryIdGeneratorOptions> options)
         {
             var datacenterId = options.Value.DatacenterId;
             var workerId = options.Value.WorkerId;

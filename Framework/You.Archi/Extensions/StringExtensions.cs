@@ -1,6 +1,6 @@
 ﻿namespace System
 {
-    public static class YaStringExtensions
+    public static class StringExtensions
     {
         /// <summary>
         /// 

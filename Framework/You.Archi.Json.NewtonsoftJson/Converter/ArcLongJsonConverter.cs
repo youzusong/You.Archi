@@ -5,7 +5,7 @@ namespace You.Archi.Json.NewtonsoftJson.Converter
     /// <summary>
     /// long类型Json转换器
     /// </summary>
-    public class YaLongJsonConverter : JsonConverter<long>
+    public class ArcLongJsonConverter : JsonConverter<long>
     {
         public override long ReadJson(JsonReader reader, Type objectType, long existingValue, bool hasExistingValue, JsonSerializer serializer)
         {

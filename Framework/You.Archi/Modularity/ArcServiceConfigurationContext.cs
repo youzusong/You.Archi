@@ -6,9 +6,9 @@ namespace You.Archi.Modularity
     /// <summary>
     /// 服务配置上下文
     /// </summary>
-    public class YaServiceConfigurationContext
+    public class ArcServiceConfigurationContext
     {
-        public YaServiceConfigurationContext([NotNull] IServiceCollection services)
+        public ArcServiceConfigurationContext([NotNull] IServiceCollection services)
         {
             this.Services = services;
             this.Items = new Dictionary<string, object?>();
