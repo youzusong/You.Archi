@@ -11,7 +11,6 @@
             _toolFilePath = toolFilePath;
         }
 
-
-
     }
+
 }
