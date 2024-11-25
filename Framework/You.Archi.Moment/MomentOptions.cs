@@ -7,7 +7,7 @@
         /// <summary>
         /// 日期时间格式
         /// </summary>
-        public string DateTimeFormat { get; set; } = "yyyy/MM/dd HH时mm分ss秒";
+        public string DateTimeFormat { get; set; } = "yyyy/MM/dd HH:mm:ss";
 
         /// <summary>
         /// 日期格式
