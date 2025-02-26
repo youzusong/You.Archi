@@ -77,7 +77,7 @@ namespace You.Archi.IdGenerator.Memory
                 {
                     // 序列ID归0
                     //_sequenceId = 0; // 会产生ID都是偶数的问题，不利于用取模的方式分库分表
-                    _sequenceId = timestamp % 10; // 取时间错的最后一位
+                    _sequenceId = timestamp % 10; // 取時間戳的最后一位
                 }
 
                 // 记录生成时间
