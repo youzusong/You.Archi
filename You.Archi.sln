@@ -25,11 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "You.Archi.AspNetCore.Mvc.Ne
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "You.Archi.Moment", "Framework\You.Archi.Moment\You.Archi.Moment.csproj", "{7666CAB1-238B-4B71-BE69-8C298D6CAC5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "You.Archi.HtmlToImage", "Framework\You.Archi.HtmlToImage\You.Archi.HtmlToImage.csproj", "{23D71F1E-F588-41B4-809A-1AB19EDE9F01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "You.Archi.HtmlToImage", "Framework\You.Archi.HtmlToImage\You.Archi.HtmlToImage.csproj", "{23D71F1E-F588-41B4-809A-1AB19EDE9F01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "You.Archi.Crypto", "Framework\You.Archi.Crypto\You.Archi.Crypto.csproj", "{15891A5C-FDEA-4D44-A679-0B5CFE75592F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "You.Archi.Crypto", "Framework\You.Archi.Crypto\You.Archi.Crypto.csproj", "{15891A5C-FDEA-4D44-A679-0B5CFE75592F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTest", "Test\CryptoTest\CryptoTest.csproj", "{6B336415-293F-4A18-844C-CB6DE07A4F62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTest", "Test\CryptoTest\CryptoTest.csproj", "{6B336415-293F-4A18-844C-CB6DE07A4F62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "You.Archi.Localization", "Framework\You.Archi.Localization\You.Archi.Localization.csproj", "{ECAF9C2B-769F-493D-87E8-9124CC06F6D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +87,10 @@ Global
 		{6B336415-293F-4A18-844C-CB6DE07A4F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B336415-293F-4A18-844C-CB6DE07A4F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B336415-293F-4A18-844C-CB6DE07A4F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECAF9C2B-769F-493D-87E8-9124CC06F6D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECAF9C2B-769F-493D-87E8-9124CC06F6D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECAF9C2B-769F-493D-87E8-9124CC06F6D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECAF9C2B-769F-493D-87E8-9124CC06F6D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{23D71F1E-F588-41B4-809A-1AB19EDE9F01} = {9ED20603-3CD8-4469-A20B-424CAB607828}
 		{15891A5C-FDEA-4D44-A679-0B5CFE75592F} = {9ED20603-3CD8-4469-A20B-424CAB607828}
 		{6B336415-293F-4A18-844C-CB6DE07A4F62} = {AA08AAC2-4B39-4BA7-A7E9-7B776CFD43CA}
+		{ECAF9C2B-769F-493D-87E8-9124CC06F6D4} = {9ED20603-3CD8-4469-A20B-424CAB607828}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {597DCC9D-2708-4A73-BBAF-FDC321CBABEB}
